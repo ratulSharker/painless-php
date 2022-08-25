@@ -1,6 +1,6 @@
 # Painless PHP (Using docker)
 
-This guide will demonstrate a way of containerisation of php application along with rapid development cycle.
+This guide will demonstrate a way of containerisation of php application along with rapid development.
 
 ## What we will do
 
@@ -11,7 +11,7 @@ This guide will demonstrate a way of containerisation of php application along w
 
 ### 1. Inspect source structure:
 
-```sh
+```txt
 .
 ├── src
 │   └── index.php
@@ -96,7 +96,9 @@ This will create a `awesome-app` container in the background
 To inspect the output of existing codebase i will use `curl`
 
 ```sh
-$ curl -i http://localhost
+curl -i http://localhost
+```
+```http
 HTTP/1.1 200 OK
 Date: Thu, 25 Aug 2022 19:27:35 GMT
 Server: Apache/2.4.38 (Debian)
@@ -118,7 +120,9 @@ Now i will modify code inside `index.php`
 #### 4. Inspect changed output.
 
 ```sh
-$ curl -i http://localhost
+curl -i http://localhost
+```
+```http
 HTTP/1.1 200 OK
 Date: Thu, 25 Aug 2022 19:37:24 GMT
 Server: Apache/2.4.38 (Debian)
